@@ -14,7 +14,7 @@ app.use(express.json());
 app.use(helmet());
 app.use(routes);
 
-routes.get('/', (req, res) => {
+routes.get('/api', (req, res) => {
   res.status(200).json({
     data: {
       services: [
