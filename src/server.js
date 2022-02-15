@@ -1,17 +1,19 @@
 // require('dotenv').config();
 
 const express = require('express');
-// const logger = require('morgan');
+const logger = require('morgan');
 const app = express();
+const cors = require('cors');
 
 // const axios = require('axios');
-// const helmet = require('helmet');
+const helmet = require('helmet');
 const routes = express.Router();
 
-// app.use(logger('dev'));
-// app.use(express.urlencoded({ extended: false }));
+app.use(logger('dev'));
+app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
-// app.use(helmet());
+app.use(helmet());
+app.use(cors());
 app.use(routes);
 
 routes.get('/api', (req, res) => {
