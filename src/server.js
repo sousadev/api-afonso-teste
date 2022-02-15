@@ -18,16 +18,14 @@ app.use(routes);
 
 routes.get('/api', (req, res) => {
   res.send({
-    data: {
-      services: [
-        'User experience design',
-        'Visual Design',
-        'Prototyping',
-        'Constant design',
-        'Design Systems',
-        'Voice, Chatbots & Multimodal UI',
-      ],
-    },
+    services: [
+      'User experience design',
+      'Visual Design',
+      'Prototyping',
+      'Constant design',
+      'Design Systems',
+      'Voice, Chatbots & Multimodal UI',
+    ],
   });
 });
 
