@@ -30,60 +30,64 @@ routes.get('/api', (req, res) => {
   });
 });
 
-routes.get('/followers', {
-  followers: [
-    {
-      totalFollow: 1987,
-      followToday: 12,
-    },
-    {
-      totalFollow: 1044,
-      followToday: 99,
-    },
-    {
-      totalFollow: 11.0,
-      followToday: 1099,
-    },
-    {
-      totalFollow: 8239,
-      followToday: 144,
-    },
-  ],
-  overview: [
-    {
-      name: 'Page Views',
-      overviewNumber: 87,
-    },
-    {
-      name: 'Likes',
-      overviewNumber: 52,
-    },
-    {
-      name: 'Likes',
-      overviewNumber: 5462,
-    },
-    {
-      name: 'Profile Views',
-      overviewNumber: 52.0,
-    },
-    {
-      name: 'Retweets',
-      overviewNumber: 117,
-    },
-    {
-      name: 'Likes',
-      overviewNumber: 507,
-    },
-    {
-      name: 'Likes',
-      overviewNumber: 107,
-    },
-    {
-      name: 'Total Views',
-      overviewNumber: 1407,
-    },
-  ],
-});
+routes.get('/followers', (req, res) =>{
+
+  res.send({
+    followers: [
+      {
+        totalFollow: 1987,
+        followToday: 12,
+      },
+      {
+        totalFollow: 1044,
+        followToday: 99,
+      },
+      {
+        totalFollow: 11.0,
+        followToday: 1099,
+      },
+      {
+        totalFollow: 8239,
+        followToday: 144,
+      },
+    ],
+    overview: [
+      {
+        name: 'Page Views',
+        overviewNumber: 87,
+      },
+      {
+        name: 'Likes',
+        overviewNumber: 52,
+      },
+      {
+        name: 'Likes',
+        overviewNumber: 5462,
+      },
+      {
+        name: 'Profile Views',
+        overviewNumber: 52.0,
+      },
+      {
+        name: 'Retweets',
+        overviewNumber: 117,
+      },
+      {
+        name: 'Likes',
+        overviewNumber: 507,
+      },
+      {
+        name: 'Likes',
+        overviewNumber: 107,
+      },
+      {
+        name: 'Total Views',
+        overviewNumber: 1407,
+      },
+    ],
+  }));
+}
+
 
 const port = process.env.PORT || 4000;
 
