@@ -30,8 +30,7 @@ routes.get('/api', (req, res) => {
   });
 });
 
-routes.get('/followers', (req, res) =>{
-
+routes.get('/followers', (req, res) => {
   res.send({
     followers: [
       {
@@ -85,9 +84,8 @@ routes.get('/followers', (req, res) =>{
         overviewNumber: 1407,
       },
     ],
-  }));
-}
-
+  });
+});
 
 const port = process.env.PORT || 4000;
 
